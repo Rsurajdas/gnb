@@ -4,14 +4,118 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GNB | Task</title>
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/Rsurajdas/CSS/gnb.css"
     /> -->
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main css -->
     <link rel="stylesheet" href="gnb.css" />
   </head>
   <body>
-    <h1>suraj</h1>
+    <!-- Header -->
+    <header>
+      <!-- Nav -->
+      <nav class="nav">
+        <!-- Nav top -->
+        <div class="nav__top">
+          <div class="nav__left">
+            <div class="nav__logo">
+              <img src="./assets/img/logo.png" alt="logo" />
+            </div>
+          </div>
+          <div class="nav__right">
+            <ul class="nav__item">
+              <li class="nav__list">
+                <a href="#" class="nav__link">
+                  <i class="fa-solid fa-house"></i>
+                  <span> for sale </span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+              </li>
+              <li class="nav__list">
+                <a href="#" class="nav__link">
+                  <i class="fa-solid fa-building"></i>
+                  <span> to rent </span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+              </li>
+              <li class="nav__list">
+                <a href="#" class="nav__link">
+                  <i class="fa-solid fa-house-user"></i>
+                  <span> shared rooms </span>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav__misc">
+              <li class="day">
+                <img src="./assets/img/sunny.png" alt="day" />
+              </li>
+              <li>
+                <img src="./assets/img/man.png" alt="profile" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Nav top -->
+        <!-- Nav bottom -->
+        <div class="nav__bottom">
+          <div class="nav__filter">
+            <form class="form">
+              <h3>For Sale</h3>
+              <div class="form__search">
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  class="form__input"
+                  placeholder="DE1 or Derby"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="form__group">
+                <select name="" id="" class="form__input">
+                  <option value="">Property Type</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <select name="" id="" class="form__input">
+                  <option value="">+0 miles</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <select name="" id="" class="form__input">
+                  <option value="">Price</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <select name="" id="" class="form__input">
+                  <option value="">Bedroom</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <select name="" id="" class="form__input">
+                  <option value="">Advanced</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <button type="submit" class="btn btn__accent">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Nav bottom -->
+      </nav>
+      <!-- Nav -->
+    </header>
+    <!-- Header -->
   </body>
 </html>
