@@ -40,6 +40,14 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media (max-width: 85.375em) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 48em) {
+    font-size: 43.75%;
+  }
 }
 
 body {
@@ -176,6 +184,10 @@ a {
 
   &__logo {
     width: 15rem;
+
+    @media (max-width: 37.5em) {
+      width: 10rem;
+    }
   }
 
   &__right {
@@ -190,8 +202,35 @@ a {
     list-style: none;
   }
 
+  &__item {
+    @media (max-width: 37.5em) {
+      // display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: @primary-color;
+      z-index: 10;
+    }
+  }
+
   &__list {
     .mr(@length-md-3);
+
+    @media (max-width: 37.5em) {
+      width: 33.333%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 7rem;
+      .mr(0);
+    }
+
+    &:not(:last-child) {
+      @media (max-width: 37.5em) {
+        border-right: 1px solid @grey;
+      }
+    }
   }
 
   &__link {
@@ -200,8 +239,16 @@ a {
     font-size: 1.4rem;
     .fw(500);
 
+    @media (max-width: 37.5em) {
+      font-size: 2rem;
+    }
+
     & span {
       margin: 0 @length-sm-1;
+    }
+
+    & i.fa-angle-down {
+      display: none;
     }
   }
 
@@ -211,6 +258,12 @@ a {
       width: 5rem;
       height: 5rem;
       cursor: pointer;
+
+      @media (max-width: 37.5em) {
+        width: 4rem;
+        height: 4rem;
+        .mr(@length-sm-3);
+      }
 
       &.day {
         border: 2px solid @grey;
@@ -235,6 +288,14 @@ a {
     align-items: center;
     justify-content: center;
     padding: @length-sm-2 0;
+
+    @media (max-width: 48em) {
+      display: none;
+    }
+
+    @media (min-width: 48.0625em) and (max-width: 75em) {
+      display: none;
+    }
   }
 }
 
@@ -278,7 +339,7 @@ a {
     background-color: @input-bg;
     border: none;
     padding: @length-sm-2 @length-sm-2;
-    height: 3.5rem;
+    // height: 3.5rem;
     border: 2px solid transparent;
     .fw(600);
     border-radius: 3px;
@@ -294,7 +355,7 @@ a {
 
 .section__property {
   background-color: @input-bg;
-  padding: @length-sm-2 @length-lg-1;
+  padding: @length-sm-2 @length-md-2;
 }
 
 .tab {
@@ -302,6 +363,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 37.5em) {
+      display: none;
+    }
 
     & h3 {
       font-size: 1.6rem;
@@ -356,13 +421,29 @@ a {
   gap: @length-sm-3;
   .mt(@length-md-1);
 
+  @media (max-width: 85.375em) {
+    columns: 4;
+  }
+
+  @media (min-width: 48.0625em) and (max-width: 75em) {
+    columns: 3;
+  }
+
+  @media (max-width: 48em) {
+    columns: 2;
+  }
+
+  @media (max-width: 37.5em) {
+    columns: 1;
+  }
+
   &__box {
     background-color: @primary-color;
     break-inside: avoid;
     overflow: hidden;
     border-radius: 0.8rem;
     .mb(@length-sm-3);
-    box-shadow: 0 3px 0.6rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0.6rem rgba(0, 0, 0, 0.05);
   }
 
   &__img {
@@ -443,4 +524,8 @@ a {
     .ml(auto);
     cursor: pointer;
   }
+}
+
+#map {
+  height: 50rem;
 }
