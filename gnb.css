@@ -346,6 +346,9 @@ a {
   background-color: #62a658;
   color: #fff;
 }
+.tab__body {
+  margin-top: 1.6rem;
+}
 .tab__content {
   display: none;
 }
@@ -355,7 +358,6 @@ a {
 .property {
   columns: 6;
   gap: 1.2rem;
-  margin-top: 1.6rem;
 }
 @media (max-width: 85.375em) {
   .property {
@@ -450,6 +452,43 @@ a {
   margin-left: auto;
   cursor: pointer;
 }
+.property__map {
+  display: flex;
+  justify-content: space-between;
+  height: 70rem;
+}
+.property__left,
+.property__right {
+  width: 49.5%;
+}
+.property__card {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.property__card .property__img {
+  width: 50%;
+}
+.property__card .property__img img {
+  height: 100%;
+  border-radius: 1rem;
+}
+.property__card .property__content {
+  width: 50%;
+}
+.property__card p {
+  font-size: 1.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+}
 #map {
-  height: 50rem;
+  height: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 1rem;
 }

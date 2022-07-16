@@ -15,7 +15,7 @@ tabHeads.forEach((head, idx) => {
 // Map
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 52.9216552, lng: -1.4813977 },
+    center: { lat: 52.92248626324853, lng: -1.4740165323883072 },
     zoom: 15.5,
     mapId: "57871d8854ad007e",
   });
