@@ -455,11 +455,29 @@ a {
 .property__map {
   display: flex;
   justify-content: space-between;
-  height: 70rem;
+}
+@media (max-width: 48em) {
+  .property__map {
+    flex-direction: column;
+  }
 }
 .property__left,
 .property__right {
   width: 49.5%;
+}
+@media (max-width: 48em) {
+  .property__left {
+    width: 100%;
+    order: 2;
+  }
+}
+@media (max-width: 48em) {
+  .property__right {
+    width: 100%;
+    height: 50rem;
+    order: 1;
+    margin-bottom: 1.6rem;
+  }
 }
 .property__card {
   background-color: #fff;
@@ -467,6 +485,8 @@ a {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
+  margin-bottom: 1.6rem;
+  position: relative;
 }
 .property__card .property__img {
   width: 50%;
@@ -478,7 +498,7 @@ a {
 .property__card .property__content {
   width: 50%;
 }
-.property__card p {
+.property__card p.ellipsis {
   font-size: 1.4rem;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -486,6 +506,52 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+.property__loc h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.property__loc .station {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.property__loc .station img {
+  width: 2rem;
+}
+.property__loc .station img:not(:last-child) {
+  margin-right: 0.4rem;
+}
+.property__loc .station p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.property__loc .others .distance,
+.property__loc .others .cta {
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.2rem;
+}
+.property__loc .others .distance {
+  color: #dddddd;
+  border: 1px solid #dddddd;
+  font-weight: 600;
+}
+.property__loc .others .cta {
+  background-color: #a66226;
+  color: #fff;
+}
+.property__brand {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  width: 7rem;
+}
+.property__dummy {
+  text-align: center;
 }
 #map {
   height: 100%;
